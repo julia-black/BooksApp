@@ -7,7 +7,8 @@ class MockInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val uri = chain.request().url().uri().toString()
         val responseString = when {
-            uri.endsWith("/api/v1/items") -> itemsJson
+            uri.isListRequest() -> itemsJson
+            uri.isDetailsRequest() -> detailsJson
             else -> ""
         }
 
@@ -26,6 +27,20 @@ class MockInterceptor : Interceptor {
             .build()
     }
 }
+
+private fun String.isListRequest() = endsWith("/api/v1/items")
+
+private fun String.isDetailsRequest() = contains(Regex("/api/v1/items/\\d"))
+
+private const val detailsJson = """
+{
+    "id": 1,
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/8bc21955316461.59b89b39bc96d.jpg",
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 5.99
+}
+"""
 
 const val itemsJson = """
 [{
@@ -109,7 +124,7 @@ const val itemsJson = """
     "title": "Book 16"
 },{
     "id": 17,
-    "link": "/api/v1/items/1",
+    "link": "/api/v1/items/17",
     "title": "Book 17"
 }]
 """

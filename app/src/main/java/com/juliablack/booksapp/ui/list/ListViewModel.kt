@@ -2,7 +2,7 @@ package com.juliablack.booksapp.ui.list
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.juliablack.domain.GetBooksUseCase
+import com.juliablack.domain.usecase.GetBooksUseCase
 import com.juliablack.domain.model.Book
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers

@@ -8,7 +8,6 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-
 fun createApi(client: OkHttpClient, gson: Gson): Api = Retrofit
     .Builder()
     .client(client)
