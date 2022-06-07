@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">BooksApp</string>
     <string name="price">Price: %1$.2f $</string>
+    <string name="title_hint">Title</string>
+    <string name="author_hint">Author</string>
+    <string name="price_hint">Price, $</string>
+    <string name="image_link_hint">Image Link</string>
+    <string name="create">Create Book</string>
+    <string name="create_success">Created successfully</string>
 </resources>

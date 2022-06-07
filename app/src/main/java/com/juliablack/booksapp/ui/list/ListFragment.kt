@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.juliablack.booksapp.R
 import com.juliablack.booksapp.databinding.FragmentListBinding
+import com.juliablack.booksapp.ui.creating.CreateFragment
 import com.juliablack.booksapp.ui.details.DetailsFragment
 import com.juliablack.booksapp.ui.list.view.BooksAdapter
 import com.juliablack.domain.model.Book
@@ -41,7 +42,8 @@ class ListFragment : Fragment() {
     }
 
     private fun setListeners() {
-        with(binding) {
+        binding.createButton.setOnClickListener {
+            toCreate()
         }
     }
 
@@ -63,6 +65,14 @@ class ListFragment : Fragment() {
         requireActivity().supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, DetailsFragment.newInstance(book.link))
+            .addToBackStack(null)
+            .commit()
+    }
+
+    private fun toCreate() {
+        requireActivity().supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container, CreateFragment.newInstance())
             .addToBackStack(null)
             .commit()
     }

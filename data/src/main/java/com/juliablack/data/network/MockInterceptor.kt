@@ -6,10 +6,15 @@ class MockInterceptor : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val uri = chain.request().url().uri().toString()
-        val responseString = when {
-            uri.isListRequest() -> itemsJson
-            uri.isDetailsRequest() -> detailsJson
-            else -> ""
+        val method = chain.request().method()
+        val responseString = if (method == GET) {
+            when {
+                uri.isListRequest() -> itemsJson
+                uri.isDetailsRequest() -> detailsJson
+                else -> ""
+            }
+        } else {
+            ""
         }
 
         return chain.proceed(chain.request())
@@ -31,6 +36,8 @@ class MockInterceptor : Interceptor {
 private fun String.isListRequest() = endsWith("/api/v1/items")
 
 private fun String.isDetailsRequest() = contains(Regex("/api/v1/items/\\d"))
+
+private const val GET = "GET"
 
 private const val detailsJson = """
 {
