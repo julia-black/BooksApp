@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BooksApp.iml" filepath="$PROJECT_DIR$/.idea/modules/BooksApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BooksApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BooksApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BooksApp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BooksApp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BooksApp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BooksApp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BooksApp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BooksApp.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/BooksApp.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/BooksApp.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/BooksApp.data.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/BooksApp.data.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/BooksApp.data.main.iml" filepath="$PROJECT_DIR$/.idea/modules/data/BooksApp.data.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/BooksApp.data.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/BooksApp.data.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/BooksApp.domain.unitTest.iml" />
+    </modules>
+  </component>
+</project>
