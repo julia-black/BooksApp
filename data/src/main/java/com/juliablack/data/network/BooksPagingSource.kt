@@ -13,7 +13,7 @@ class BooksPagingSource(private val api: Api) : PagingSource<Int, Book>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Book> {
         val page = params.key ?: DEFAULT_PAGE_INDEX
         return try {
-            val response = api.getBooks(page, params.loadSize)
+            val response = api.getBooks(page * params.loadSize, params.loadSize)
             LoadResult.Page(
                 response,
                 prevKey = if (page == DEFAULT_PAGE_INDEX) null else page - 1,
