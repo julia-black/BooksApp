@@ -12,8 +12,8 @@ import com.juliablack.domain.model.BookDetailsRequestBody
 @ExperimentalPagingApi
 class BooksRepositoryImpl(private val api: Api) : BooksRepository {
 
-    override fun getBooks(offset: Int, count: Int) = Pager(
-        config = PagingConfig(10),
+    override fun getBooks(count: Int) = Pager(
+        config = PagingConfig(count),
         pagingSourceFactory = { BooksPagingSource(api) }
     ).observable
 

@@ -9,7 +9,7 @@ import io.reactivex.Observable
 import io.reactivex.Single
 
 interface BooksRepository {
-    fun getBooks(offset: Int, count: Int): Observable<PagingData<Book>>
+    fun getBooks(count: Int): Observable<PagingData<Book>>
 
     fun getBookDetails(url: String): Single<BookDetails>
 

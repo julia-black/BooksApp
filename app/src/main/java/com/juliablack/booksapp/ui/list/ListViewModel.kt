@@ -17,14 +17,12 @@ class ListViewModel(
     val liveBooks = MutableLiveData<PagingData<Book>>()
     val liveError = MutableLiveData<String>()
 
-    private var offset = 0
-
     init {
         loadBooks()
     }
 
     private fun loadBooks() {
-        getBooksUseCase.invoke(offset, COUNT).cachedIn(viewModelScope)
+        getBooksUseCase.invoke(COUNT).cachedIn(viewModelScope)
             .subscribe({
                 liveBooks.postValue(it)
             }, {
