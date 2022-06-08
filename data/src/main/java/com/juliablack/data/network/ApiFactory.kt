@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 fun createApi(client: OkHttpClient, gson: Gson): Api = Retrofit
@@ -13,7 +13,7 @@ fun createApi(client: OkHttpClient, gson: Gson): Api = Retrofit
     .client(client)
     .baseUrl("https://www.google.com/")
     .addConverterFactory(GsonConverterFactory.create(gson))
-    .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
     .build()
     .create(Api::class.java)
 

@@ -1,13 +1,15 @@
 package com.juliablack.domain
 
+import androidx.paging.PagingData
 import com.juliablack.domain.model.Book
 import com.juliablack.domain.model.BookDetails
 import com.juliablack.domain.model.BookDetailsRequestBody
-import io.reactivex.rxjava3.core.Completable
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Completable
+import io.reactivex.Observable
+import io.reactivex.Single
 
 interface BooksRepository {
-    fun getBooks(): Single<List<Book>>
+    fun getBooks(offset: Int, count: Int): Observable<PagingData<Book>>
 
     fun getBookDetails(url: String): Single<BookDetails>
 

@@ -33,9 +33,9 @@ class MockInterceptor : Interceptor {
     }
 }
 
-private fun String.isListRequest() = endsWith("/api/v1/items")
+private fun String.isDetailsRequest() = contains(Regex("/api/v1/items/\\d+"))
 
-private fun String.isDetailsRequest() = contains(Regex("/api/v1/items/\\d"))
+private fun String.isListRequest() = contains(Regex("/api/v1/items\\?offset=\\d+&count=\\d+"))
 
 private const val GET = "GET"
 
@@ -99,39 +99,41 @@ const val itemsJson = """
     "id": 10,
     "link": "/api/v1/items/10",
     "title": "Book 10"
-},
-{
-    "id": 11,
-    "link": "/api/v1/items/11",
-    "title": "Book 11"
-},
-{
-    "id": 12,
-    "link": "/api/v1/items/12",
-    "title": "Book 12"
-},
-{
-    "id": 13,
-    "link": "/api/v1/items/13",
-    "title": "Book 13"
-},
-{
-    "id": 14,
-    "link": "/api/v1/items/14",
-    "title": "Book 14"
-},
-{
-    "id": 15,
-    "link": "/api/v1/items/15",
-    "title": "Book 15"
-},
-{
-    "id": 16,
-    "link": "/api/v1/items/16",
-    "title": "Book 16"
-},{
-    "id": 17,
-    "link": "/api/v1/items/17",
-    "title": "Book 17"
-}]
-"""
+}]"""
+
+//,
+//{
+//    "id": 11,
+//    "link": "/api/v1/items/11",
+//    "title": "Book 11"
+//},
+//{
+//    "id": 12,
+//    "link": "/api/v1/items/12",
+//    "title": "Book 12"
+//},
+//{
+//    "id": 13,
+//    "link": "/api/v1/items/13",
+//    "title": "Book 13"
+//},
+//{
+//    "id": 14,
+//    "link": "/api/v1/items/14",
+//    "title": "Book 14"
+//},
+//{
+//    "id": 15,
+//    "link": "/api/v1/items/15",
+//    "title": "Book 15"
+//},
+//{
+//    "id": 16,
+//    "link": "/api/v1/items/16",
+//    "title": "Book 16"
+//},{
+//    "id": 17,
+//    "link": "/api/v1/items/17",
+//    "title": "Book 17"
+//}]
+//"""

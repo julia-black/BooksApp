@@ -2,7 +2,7 @@ package com.juliablack.domain.usecase
 
 import com.juliablack.domain.BooksRepository
 import com.juliablack.domain.model.BookDetailsRequestBody
-import io.reactivex.rxjava3.core.Completable
+import io.reactivex.Completable
 
 class CreateBookUseCase(private val repository: BooksRepository) {
     fun invoke(title: String, author: String, price: String, image: String): Completable {
