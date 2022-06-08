@@ -15,5 +15,5 @@ interface Api {
     fun getBookDetails(@Url url: String): Single<BookDetails>
 
     @POST("/api/v1/items")
-    fun createNewBook(@Body bode: BookDetailsRequestBody): Completable
+    fun createNewBook(@Body body: BookDetailsRequestBody): Completable
 }

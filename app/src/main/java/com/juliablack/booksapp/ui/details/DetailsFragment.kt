@@ -18,10 +18,10 @@ class DetailsFragment : Fragment() {
 
     private val viewModel: DetailsViewModel by viewModel { parametersOf(url) }
 
+    private val url by lazy { arguments?.get(ARG_URL) as String }
+
     private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
-
-    private val url by lazy { arguments?.get(ARG_URL) as String }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

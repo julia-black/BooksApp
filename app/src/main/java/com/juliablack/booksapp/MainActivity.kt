@@ -3,7 +3,9 @@ package com.juliablack.booksapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.juliablack.booksapp.ui.list.ListFragment
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

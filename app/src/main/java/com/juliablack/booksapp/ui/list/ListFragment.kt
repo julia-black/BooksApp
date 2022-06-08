@@ -14,9 +14,11 @@ import com.juliablack.booksapp.ui.creating.CreateFragment
 import com.juliablack.booksapp.ui.details.DetailsFragment
 import com.juliablack.booksapp.ui.list.view.BooksAdapter
 import com.juliablack.domain.model.Book
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@ExperimentalCoroutinesApi
 class ListFragment : Fragment() {
 
     private val viewModel: ListViewModel by viewModel()

@@ -10,7 +10,7 @@ import com.juliablack.domain.BooksRepository
 import okhttp3.Interceptor
 import org.koin.dsl.module
 
-@OptIn(ExperimentalPagingApi::class)
+@ExperimentalPagingApi
 val dataModule = module {
     factory<Interceptor> { MockInterceptor() }
     single { createGson() }
